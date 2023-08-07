@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Focus Timer2</title>
+    <link rel="shortcut icon" href="./assets/favicon.svg" type="image/x-svg">
+    <link rel="stylesheet" href="style.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script type="module" src="./src/main.js" defer></script>
+    
+</head>
+<body>
+    <div class="app">
+
+        <div class="screenTimer">
+            <section id="timer" class="flex">
+                <span id="minutes">00</span>
+                <span>:</span>
+                <span id="seconds">00</span>
+            </section>
+
+            <section id="controls" class="flex">
+                <button
+                data-action="toggleRunning"
+                class="ph ph-play-circle">
+                    <span class="sr-only">Iniciar contador</span>
+                </button>
+
+                <button
+                id="stopButton"
+                data-action="toggleStop"
+                class="ph ph-stop-circle">
+                    <span class="sr-only">Parar contador</span>
+                </button>
+
+                <button
+                data-action="increase"
+                class="ph ph-plus-circle">
+                    <span class="sr-only">Aumentar volume</span>
+                </button>
+
+                <button
+                data-action="decrease"
+                class="ph ph-minus-circle">
+                    <span class="sr-only">Diminuir volume</span>
+                </button>
+            </section>
+        </div>
+
+        <div id="controlSound" class="sounds">
+            <button
+            data-action="soundTree"
+            class="ph ph-tree-evergreen sound-button">
+                <span class="sr-only">Som de floresta</span>
+            </button>
+
+            <button
+            data-action="soundRain"
+            class="ph ph-cloud-rain sound-button">
+                <span class="sr-only">Som de chuva</span>
+            </button>
+
+            <button
+            data-action="soundCoffee"
+            class="ph ph-coffee sound-button">
+                <span class="sr-only">Som de cafeteria</span>
+            </button>
+
+            <button
+            data-action="soundFire"
+            class="ph ph-fire sound-button">
+                <span class="sr-only">Som de lareira</span>
+            </button>
+        </div>
+    </div>
+</body>
+</html>
